@@ -2,7 +2,6 @@ name: Post welcome comment
 
 on:
   pull_request:
-    types: [opened]
 
 permissions:
   pull-requests: write
@@ -12,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Comment on PR
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
